@@ -7,11 +7,11 @@ using the Binary Pursuit algorithm, as described in [Pillow et al 2013](http://p
 Downloading the repository
 ------------
 
-From command line:
+**From command line:**
 
     > git clone https://github.com/jpillow/BinaryPursuitSpikeSorting.git
 
-In browser:   click Download ZIP" icon at right.
+**In browser:**   click Download ZIP" icon at right.
 
 
 Example Script
