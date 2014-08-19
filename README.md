@@ -16,7 +16,9 @@ Downloading the repository
 
      ```git clone https://github.com/jpillow/BinaryPursuitSpikeSorting.git```
 
-- **In browser:**   click Download ZIP" icon at right.
+- **In browser:**   click to
+  [Download ZIP](https://github.com/jpillow/BinaryPursuitSpikeSorting/archive/master.zip)
+  and then unzip archive
 
 
 Example Script
