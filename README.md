@@ -8,4 +8,4 @@ Installation
 ------------
 Downloading the source code from command line:
 
-    $ git clone https://github.com/pillowlab/CDMentropy.git
+    $ git clone https://github.com/jpillow/BinaryPursuitSpikeSorting.git
