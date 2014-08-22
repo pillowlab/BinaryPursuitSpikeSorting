@@ -8,7 +8,7 @@
 % Set path and loads relevant data structures: 'sdat', 'dirlist', 'filelist'
 setSpikeSortParams;  
 
-% ---- Load initial estimate of spike times (sparse nsamps x ncells array) ------------
+% ---- Load initial estimate of spike times (sparse nsamps x ncell array) ------------
 Xtrue = struct2array(load('dat/simdata/Xsp_true.mat')); % true spikes
 Xhat = struct2array(load(filelist.Xhat,'Xhat')); % estimated spikes
 
@@ -17,8 +17,8 @@ tol = 3;  % in bins
 
 % Compute Hits for each time shift
 slen = sdat.nsamps;
-Xhit = zeros(2*tol+1,sdat.ncells);
-XFA = zeros(1,sdat.ncells);
+Xhit = zeros(2*tol+1,sdat.ncell);
+XFA = zeros(1,sdat.ncell);
 for j = 1:(2*tol+1)
     ii1 = max(1,j-tol):min(slen,slen-tol+j-1);
     ii2 = max(1,tol-j+2):min(slen,slen-j+tol+1);
@@ -39,7 +39,7 @@ xlabel('time shift (bins)'); ylabel('P(hit)');
 nMiss = sum(Xtrue)-nHits;
 fracMiss = nMiss./sum(Xtrue);
 fprintf('\n--- Misses ----\n');
-for j = 1:sdat.ncells
+for j = 1:sdat.ncell
     fprintf('cell %d: %d (frac = %.3f)\n', j,nMiss(j), fracMiss(j));
 end
 
@@ -47,6 +47,6 @@ end
 nFA = sum(Xhat)-sum(Xhit);
 fracFA = nFA./sum(Xhat);
 fprintf('\n--- False Alarms ----\n');
-for j = 1:sdat.ncells
+for j = 1:sdat.ncell
     fprintf('cell %d: %d (frac = %.3f)\n', j,nFA(j), fracFA(j));
 end

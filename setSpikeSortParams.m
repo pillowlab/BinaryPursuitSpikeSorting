@@ -57,11 +57,11 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % NAMES FOR RAW DAT FILES (CHANGE THESE)
-filelist.initspikes = [dirlist.rawdat, 'Xsp_init.mat']; % initial spike train estimate (sparse nsamps x ncells array)
-filelist.Ydat = [dirlist.rawdat, 'Y.mat']; % initial spike train estimate (sparse nsamps x ncells array)
+filelist.initspikes = [dirlist.rawdat, 'Xsp_init.mat']; % initial spike train estimate (sparse nsamps x ncell array)
+filelist.Ydat = [dirlist.rawdat, 'Y.mat']; % initial spike train estimate (sparse nsamps x ncell array)
 
 % NAMES FOR PROCESSED DATA FILES (can leave)
-filelist.Ywht = [dirlist.Ywht, 'Y_chunk%d.mat']; % initial spike train estimate (sparse nsamps x ncells array)
+filelist.Ywht = [dirlist.Ywht, 'Y_chunk%d.mat']; % initial spike train estimate (sparse nsamps x ncell array)
 filelist.Wraw = [dirlist.W, 'Wraw_%d.mat']; % initial (pre-whitening) estimates of Waveform 
 filelist.Wwht = [dirlist.W, 'Wwht_%d.mat']; % estimates of Waveform w/ whitened data
 filelist.Xhat = [dirlist.tspEstim, 'Xhat.mat'];

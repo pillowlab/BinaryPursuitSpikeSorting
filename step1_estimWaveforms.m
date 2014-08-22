@@ -8,7 +8,7 @@ setSpikeSortParams;
 % Is simulation?  (for comparisons to ground truth)
 isSIM = 1; % Set to true only when running demo code with simulation data 
 
-% ---- Load initial estimate of spike times (sparse nsamps x ncells array) -----
+% ---- Load initial estimate of spike times (sparse nsamps x ncell array) -----
 Xsp = struct2array(load(filelist.initspikes));  % loads variable 'Xsp_init'
 
 % ---  Set some params governing block size for estimating waveforms ------
@@ -38,8 +38,8 @@ end
 
 % NOTE: if support of waveform extends outside plotted window, consider shifting spike
 % times or increase sdat.nsampsPerW
-for j = (1:sdat.ncells)
-    subplot(sdat.ncells,1,j);
+for j = (1:sdat.ncell)
+    subplot(sdat.ncell,1,j);
     plot(1:sdat.nw, W(:,:,j),'b');
     ylabel(sprintf('cell %d',j));
 end
@@ -48,8 +48,8 @@ xlabel('time (bins)');
 % === Compare esimated and true waveform (SIMULATION ONLY) === 
 if isSIM 
     ww = load('dat/simdata/W_true.mat');  % load true waveforms
-    for j = (1:sdat.ncells)
-        subplot(sdat.ncells,1,j); hold on;
+    for j = (1:sdat.ncell)
+        subplot(sdat.ncell,1,j); hold on;
         plot(1:size(ww.W,1),ww.W(:,:,j),'r--'); hold off;
     end
 end

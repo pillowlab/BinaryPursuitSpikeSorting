@@ -31,7 +31,7 @@ tbins = (1:nwt)';  % time bins
 someWaves = normpdf(repmat(tbins,1,5),repmat(nwt/5+(1:2:9),nwt,1),repmat(1.5:6,nwt,1));
 
 % Make waveform for each neuron
-W = zeros(nwt,sdat.ne,sdat.ncell); % tensor for spike waveforms (nwt x nelectrodes x ncells)
+W = zeros(nwt,sdat.ne,sdat.ncell); % tensor for spike waveforms (nwt x nelectrodes x ncell)
 for j = 1:sdat.ncell
     elecinds = max(1,round(j/sdat.ncell*sdat.ne)-2):min(sdat.ne,round(j/sdat.ncell*sdat.ne)+1); % which electrodes the cell talks to
     spwaveform = someWaves*(randn(size(someWaves,2),length(elecinds))+.1); % the waveform

@@ -6,7 +6,7 @@
 setSpikeSortParams;  
 fprintf('Step 4: running Binary Pursuit to estimate spike times\n');
 
-% ---- Load initial estimate of spike times (sparse nsamps x ncells array) ------------
+% ---- Load initial estimate of spike times (sparse nsamps x ncell array) ------------
 X0 = struct2array(load(filelist.initspikes));  % loads variable 'Xsp_init'
 
 % ---  Set some params governing block size for estimating waveforms ------
@@ -27,7 +27,7 @@ if sum(nrefviols) == 0
     fprintf('No refractory period violations (%.1fms)\n',sdat.minISIms);
 else
     fprintf('Number spikes pruned due to refractory violations (%.1fms)\n',sdat.minISIms);
-    for j = 1:sdat.ncells
+    for j = 1:sdat.ncell
         if nrefviols(j)>0
             fprintf('cell %d: %d\n', j, nrefviols(j));
         end

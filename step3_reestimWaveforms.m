@@ -5,7 +5,7 @@
 % Set path and loads relevant data structures: 'sdat', 'dirlist', 'filelist'
 setSpikeSortParams;  
 
-% ---- Load initial estimate of spike times (sparse nsamps x ncells array) ------------
+% ---- Load initial estimate of spike times (sparse nsamps x ncell array) ------------
 Xsp = struct2array(load(filelist.initspikes));  % loads variable 'Xsp_init'
 
 % ---  Set some params governing block size for estimating waveforms ------
@@ -40,8 +40,8 @@ end
 
 % NOTE: if support of waveform extends outside plotted window, consider shifting spike
 % times or increase sdat.nsampsPerW
-for j = (1:sdat.ncells)
-    subplot(sdat.ncells,1,j);
+for j = (1:sdat.ncell)
+    subplot(sdat.ncell,1,j);
     plot(1:sdat.nw, W(:,:,j),'b'); axis tight;
     ylabel(sprintf('cell %d',j)); 
 end
