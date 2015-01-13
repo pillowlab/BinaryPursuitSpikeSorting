@@ -3,7 +3,7 @@ BinaryPursuitSpikeSorting
 
 Detect synchronous and overlapped spikes in extracellular recordings
 using the Binary Pursuit algorithm, as described in
-[Pillow et al 2013](http://pillowlab.cps.utexas.edu/pubs/abs_Pillow_PLOSONE13.html).
+[Pillow et al 2013](http://pillowlab.princeton.edu/pubs/abs_Pillow_PLOSONE13.html).
 
 You can find a blog post describing the basic geometry of the problem
 and our algorithm for solving it
