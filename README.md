@@ -30,4 +30,4 @@ dataset
 
 - J. W. Pillow, J. Shlens, E. J. Chichilnisky, & E. P. Simoncelli
  (2013).
- [A model-based spike sorting algorithm for removing correlation artifacts in multi-neuron recordings](http://pillowlab.cps.utexas.edu/pubs/abs_Pillow_PLOSONE13.html) PLoS ONE 8(5) 1-14.
+ [A model-based spike sorting algorithm for removing correlation artifacts in multi-neuron recordings](http://pillowlab.princeton.edu/pubs/abs_Pillow_PLOSONE13.html) PLoS ONE 8(5) 1-14.
